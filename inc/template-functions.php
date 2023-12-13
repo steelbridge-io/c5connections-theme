@@ -35,3 +35,11 @@ function c5connections_theme_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'c5connections_theme_pingback_header' );
+
+// Redirect user to home page or front page upon logging out
+add_action('wp_logout','auto_redirect_after_logout');
+
+function auto_redirect_after_logout(){
+	wp_redirect( home_url() );
+	exit();
+}
