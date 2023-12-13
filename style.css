@@ -22,7 +22,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS: I remember when we
+>>> TABLE OF CONTENTS: Game time
 ----------------------------------------------------------------
 # Generic
 	- Normalize
@@ -580,7 +580,8 @@ textarea {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    position: relative; }
+    position: relative;
+    margin: 0 5px; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
