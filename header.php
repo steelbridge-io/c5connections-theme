@@ -16,6 +16,18 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <?php  if (!is_user_logged_in() && is_front_page() && is_home()): ?>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;  /* this will vertically center */
+            justify-content: center;  /* this will horizontally center */
+        }
+    </style>
+
+    <?php endif; ?>
 
 	<?php wp_head(); ?>
 </head>
@@ -25,7 +37,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'c5connections-theme' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header container-fluid">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -45,6 +57,8 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+        <?php  if (is_user_logged_in()) : ?>
+
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'c5connections-theme' ); ?></button>
 			<?php
@@ -56,4 +70,6 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+        <?php endif; ?>
 	</header><!-- #masthead -->
