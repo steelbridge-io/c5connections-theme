@@ -69,7 +69,11 @@
 				)
 			);
 			?>
+			<?php if ( is_user_logged_in() ): ?>
+                <a href="<?php echo wp_logout_url(); ?>" class="log-out">Logout</a>
+			<?php endif; ?>
 		</nav><!-- #site-navigation -->
+        
 
         <?php endif; ?>
 	</header><!-- #masthead -->

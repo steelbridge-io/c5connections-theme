@@ -19,7 +19,7 @@
 				printf( esc_html__( 'This website is powered by %s', 'c5connections-theme' ), 'ParsonsHosting' );
 				?>
 			</a>
-			<span class="sep"> | </span>
+			<span class="sep">&nbsp;|&nbsp;</span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'c5connections-theme' ), 'c5connections-theme', '<a href="https://c5connections.org">C5 Connections</a>' );
