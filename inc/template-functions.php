@@ -43,3 +43,10 @@ function auto_redirect_after_logout(){
 	wp_redirect( home_url() );
 	exit();
 }
+
+// Adds read more to end of excerpt
+function new_excerpt_more($more) {
+	global $post;
+	return '...<a class="moretag" href="'. get_permalink($post->ID) . '"><br>Read More</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
