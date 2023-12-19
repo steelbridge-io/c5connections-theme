@@ -184,3 +184,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+function add_custom_css() {
+	if (!is_user_logged_in() && is_front_page() && is_home()) : ?>
+		<style>
+          html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;  /* this will vertically center */
+            justify-content: center;  /* this will horizontally center */
+            width: 100%;
+            background-image: linear-gradient(to right, #e6789c 0%,#e8af67 100%);
+          }
+		</style>
+	<?php endif;
+}
+add_action('wp_head', 'add_custom_css');

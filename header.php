@@ -16,19 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <?php  if (!is_user_logged_in() && is_front_page() && is_home()): ?>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;  /* this will vertically center */
-            justify-content: center;  /* this will horizontally center */
-        }
-    </style>
-
-    <?php endif; ?>
-
 	<?php wp_head(); ?>
 </head>
 
