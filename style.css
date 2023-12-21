@@ -467,6 +467,9 @@ big {
 body {
   background: #fff;
 }
+body.single {
+  background-image: linear-gradient(to right, #e6789c 0%, #e8af67 100%);
+}
 
 hr {
   background-color: #ccc;
