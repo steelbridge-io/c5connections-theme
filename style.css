@@ -750,6 +750,7 @@ body.c5-background-color {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
+  text-align: start;
   flex: 1 0 50%;
 }
 .comment-navigation .nav-next,
@@ -757,6 +758,41 @@ body.c5-background-color {
 .post-navigation .nav-next {
   text-align: end;
   flex: 1 0 50%;
+}
+
+.navigation.post-navigation {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation.post-navigation .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navigation.post-navigation .nav-links .nav-previous a,
+.navigation.post-navigation .nav-links .nav-next a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  margin: 0 20px;
+}
+
+.navigation.post-navigation .nav-links .nav-previous a:hover,
+.navigation.post-navigation .nav-links .nav-next a:hover {
+  color: #007acc;
+}
+
+.navigation.post-navigation .nav-links .nav-previous a:active,
+.navigation.post-navigation .nav-links .nav-next a:active {
+  color: #005999;
 }
 
 /* Posts and pages
