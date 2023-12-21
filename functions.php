@@ -200,4 +200,4 @@ function add_custom_css() {
 		</style>
 	<?php endif;
 }
-add_action('wp_head', 'add_custom_css');
+//add_action('wp_head', 'add_custom_css');
