@@ -2,5 +2,9 @@ body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 	&.single {
 		background-image: linear-gradient(to right, #e6789c 0%, #e8af67 100%);
+		#primary {
+			background-color: #f5f5f5;
+			padding: 1em;
+		}
 	}
 }

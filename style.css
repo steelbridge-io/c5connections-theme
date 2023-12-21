@@ -470,6 +470,10 @@ body {
 body.single {
   background-image: linear-gradient(to right, #e6789c 0%, #e8af67 100%);
 }
+body.single #primary {
+  background-color: #f5f5f5;
+  padding: 1em;
+}
 
 hr {
   background-color: #ccc;
