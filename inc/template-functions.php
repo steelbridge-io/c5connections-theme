@@ -43,7 +43,7 @@ add_action( 'wp_head', 'c5connections_theme_pingback_header' );
 add_action( 'wp_logout', 'auto_redirect_after_logout' );
 
 function auto_redirect_after_logout() {
-	wp_redirect( home_url() );
+	wp_redirect( 'https://c5connections.org' );
 	exit();
 }
 
