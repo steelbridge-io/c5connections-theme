@@ -477,6 +477,16 @@ body.single #primary {
   box-shadow: 0px 2px 40px -9px #673243;
   margin-bottom: 3.618em;
 }
+body.page-template-default {
+  background-image: linear-gradient(to right, #e6789c 0%, #e8af67 100%);
+}
+body.page-template-default #primary {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0px 2px 40px -9px #673243;
+  margin-bottom: 3.618em;
+}
 
 hr {
   background-color: #ccc;
@@ -540,6 +550,19 @@ table {
 
 .log-out {
   margin: 0 5px;
+}
+
+.c5-logo {
+  max-width: 200px;
+  margin-bottom: 1em;
+}
+
+.logged-in .site-title {
+  display: none;
+}
+
+.logged-out .c5-logo {
+  display: none;
 }
 
 #colophon.site-footer {
