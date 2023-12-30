@@ -185,19 +185,10 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-function add_custom_css() {
-	if (!is_user_logged_in() && is_front_page() && is_home()) : ?>
-		<style>
-          html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;  /* this will vertically center */
-            justify-content: center;  /* this will horizontally center */
-            width: 100%;
-            background-image: linear-gradient(to right, #e6789c 0%,#e8af67 100%);
-          }
-		</style>
-	<?php endif;
+/**
+ * WP Mail SMTP Action Scheduler Retention Time Set to 1 week .vs 1 month
+ */
+function custom_as_retention_period() {
+	return WEEK_IN_SECONDS;
 }
-//add_action('wp_head', 'add_custom_css');
+add_filter( 'action_scheduler_retention_period', 'custom_as_retention_period' );
