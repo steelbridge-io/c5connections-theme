@@ -565,6 +565,12 @@ table {
   display: none;
 }
 
+.published,
+.author {
+  margin-right: 0.5em;
+  font-weight: 500;
+}
+
 #colophon.site-footer {
   padding: 2.618em;
   background-color: #111;
