@@ -633,6 +633,18 @@ input[type=submit]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
+.wpforms-submit-container button[type=submit].wpforms-submit {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 20px;
+  background: #ca7878 !important;
+  color: white !important;
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 1.1rem;
+  border: none;
+}
+
 input[type=text],
 input[type=email],
 input[type=url],
@@ -707,6 +719,14 @@ body.home.logged-out {
 
 body.c5-background-color {
   background-image: linear-gradient(to right, #e6789c 0%, #e8af67 100%);
+}
+
+#front-page-posts article .entry-header .published,
+#front-page-posts article .entry-header .author {
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  line-height: 1.3;
 }
 
 /*--------------------------------------------------------------
@@ -799,12 +819,16 @@ body.c5-background-color {
   text-align: end;
   flex: 1 0 50%;
 }
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+  text-align: left;
+}
 
 .navigation.post-navigation {
   text-align: center;
   padding: 20px;
   display: flex;
-  justify-content: center;
 }
 
 .navigation.post-navigation .nav-links {
@@ -821,7 +845,7 @@ body.c5-background-color {
   background: #ca7878;
   color: white !important;
   border-radius: 50px;
-  padding: 6px 14px;
+  padding: 10px 20px;
   font-size: 1.1rem;
 }
 
