@@ -192,3 +192,26 @@ function custom_as_retention_period() {
 	return WEEK_IN_SECONDS;
 }
 add_filter( 'action_scheduler_retention_period', 'custom_as_retention_period' );
+
+/**
+ * Custom Log In
+ */
+function custom_login_styles() {
+	wp_enqueue_style('custom-login', get_template_directory_uri() . '/login-css/custom-login.css');
+}
+add_action('login_enqueue_scripts', 'custom_login_styles');
+
+function custom_login_logo_url() {
+	return home_url(); // Change this to your desired URL
+}
+add_filter('login_headerurl', 'custom_login_logo_url');
+
+function custom_login_logo_title() {
+	return 'C5 Connections'; // Change this to your site's name
+}
+add_filter('login_headertext', 'custom_login_logo_title');
+
+function custom_login_errors($errors) {
+	$errors->add('custom_error', __('Something is not right. Either password or user/email.'));
+}
+add_filter('login_errors', 'custom_login_errors');
