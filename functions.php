@@ -215,3 +215,19 @@ function custom_login_errors($errors) {
 	$errors->add('custom_error', __('Something is not right. Either password or user/email.'));
 }
 add_filter('login_errors', 'custom_login_errors');
+
+/**
+ * Redirect to login
+ */
+function restrict_access_to_logged_in_users() {
+	global $pagenow;
+	// Check if WordPress is accessing the front page or the WordPress admin
+	if ($pagenow !== "wp-login.php" && !is_user_logged_in()) {
+		// If it's not the front-page or the WordPress admin and the user is not logged in
+		if (!is_front_page() && !is_admin()) {
+			// Redirect them to the login page
+			wp_redirect(home_url());
+		}
+	}
+}
+add_action('template_redirect', 'restrict_access_to_logged_in_users');
